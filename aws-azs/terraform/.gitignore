@@ -1,0 +1,5 @@
+.terraform
+*.swp
+*.tfstate
+*.tfstate.backup
+output.json

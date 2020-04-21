@@ -1,0 +1,40 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"use1-az6\n(us-east-1a)"
+	"use1-az6\n(us-east-1a)" -- "use1-az1\n(us-east-1b)" [label="0.912ms" len=8.317440000000001]
+	"use1-az6\n(us-east-1a)" -- "use1-az2\n(us-east-1c)" [label="0.901ms" len=8.11801]
+	"use1-az6\n(us-east-1a)" -- "use1-az4\n(us-east-1d)" [label="1.286ms" len=16.53796]
+	"use1-az6\n(us-east-1a)" -- "use1-az3\n(us-east-1e)" [label="0.618ms" len=3.8192399999999997]
+	"use1-az6\n(us-east-1a)" -- "use1-az5\n(us-east-1f)" [label="0.886ms" len=7.84996]
+	"use1-az1\n(us-east-1b)"
+	"use1-az1\n(us-east-1b)" -- "use1-az6\n(us-east-1a)" [label="0.909ms" len=8.26281]
+	"use1-az1\n(us-east-1b)" -- "use1-az2\n(us-east-1c)" [label="0.802ms" len=6.432040000000001]
+	"use1-az1\n(us-east-1b)" -- "use1-az4\n(us-east-1d)" [label="0.806ms" len=6.496360000000001]
+	"use1-az1\n(us-east-1b)" -- "use1-az3\n(us-east-1e)" [label="1.037ms" len=10.753689999999999]
+	"use1-az1\n(us-east-1b)" -- "use1-az5\n(us-east-1f)" [label="1.194ms" len=14.256359999999999]
+	"use1-az2\n(us-east-1c)"
+	"use1-az2\n(us-east-1c)" -- "use1-az6\n(us-east-1a)" [label="0.822ms" len=6.7568399999999995]
+	"use1-az2\n(us-east-1c)" -- "use1-az1\n(us-east-1b)" [label="0.798ms" len=6.368040000000001]
+	"use1-az2\n(us-east-1c)" -- "use1-az4\n(us-east-1d)" [label="0.578ms" len=3.340839999999999]
+	"use1-az2\n(us-east-1c)" -- "use1-az3\n(us-east-1e)" [label="0.931ms" len=8.667610000000002]
+	"use1-az2\n(us-east-1c)" -- "use1-az5\n(us-east-1f)" [label="0.658ms" len=4.32964]
+	"use1-az4\n(us-east-1d)"
+	"use1-az4\n(us-east-1d)" -- "use1-az6\n(us-east-1a)" [label="1.243ms" len=15.450490000000004]
+	"use1-az4\n(us-east-1d)" -- "use1-az1\n(us-east-1b)" [label="0.821ms" len=6.740409999999999]
+	"use1-az4\n(us-east-1d)" -- "use1-az2\n(us-east-1c)" [label="0.579ms" len=3.3524099999999994]
+	"use1-az4\n(us-east-1d)" -- "use1-az3\n(us-east-1e)" [label="0.938ms" len=8.79844]
+	"use1-az4\n(us-east-1d)" -- "use1-az5\n(us-east-1f)" [label="1.057ms" len=11.17249]
+	"use1-az3\n(us-east-1e)"
+	"use1-az3\n(us-east-1e)" -- "use1-az6\n(us-east-1a)" [label="0.592ms" len=3.5046399999999993]
+	"use1-az3\n(us-east-1e)" -- "use1-az1\n(us-east-1b)" [label="1.076ms" len=11.577760000000001]
+	"use1-az3\n(us-east-1e)" -- "use1-az2\n(us-east-1c)" [label="0.927ms" len=8.593290000000001]
+	"use1-az3\n(us-east-1e)" -- "use1-az4\n(us-east-1d)" [label="0.983ms" len=9.662889999999999]
+	"use1-az3\n(us-east-1e)" -- "use1-az5\n(us-east-1f)" [label="0.950ms" len=9.025]
+	"use1-az5\n(us-east-1f)"
+	"use1-az5\n(us-east-1f)" -- "use1-az6\n(us-east-1a)" [label="0.913ms" len=8.335690000000001]
+	"use1-az5\n(us-east-1f)" -- "use1-az1\n(us-east-1b)" [label="1.192ms" len=14.208639999999999]
+	"use1-az5\n(us-east-1f)" -- "use1-az2\n(us-east-1c)" [label="0.642ms" len=4.12164]
+	"use1-az5\n(us-east-1f)" -- "use1-az4\n(us-east-1d)" [label="1.090ms" len=11.881000000000002]
+	"use1-az5\n(us-east-1f)" -- "use1-az3\n(us-east-1e)" [label="0.932ms" len=8.686240000000002]
+}
