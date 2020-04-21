@@ -46,12 +46,12 @@ def human_region_name(region):
 
 for row in c:
     print(row["Region"])
-    g.node(region_to_label(row["Region"]))
+    g.node(region_to_label(row["Region"]), color="turquoise")
     for dest, value in row.items():
         if row["Region"] == dest or dest == "Region":
             continue
         print(f"From {row['Region']} to {dest} takes {value}")
-        g.edge(region_to_label(row['Region']), region_to_label(dest), len=str((int(value)/100)**1.1), label=f"{value}ms")
+        g.edge(region_to_label(row['Region']), region_to_label(dest), len=str((float(value)/1000)**1.0), label=f"{value}ms", arrowtype="normal")
 
 print(g.source)
 g.render('region-latency.gv', view=True)
