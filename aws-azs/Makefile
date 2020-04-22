@@ -19,5 +19,8 @@ plan:
 apply:
 	./do-each-region terraform apply -auto-approve
 
+output:
+	./do-each-region 'terraform output > output.json'
+
 destroy:
 	./do-each-region terraform destroy -auto-approve

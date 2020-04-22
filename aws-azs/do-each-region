@@ -2,6 +2,6 @@
 set -vxue
 for region in `cat region-list`; do
   cd outputs/$region
-  $*
+  bash -c "$*"
   cd ../../
 done
