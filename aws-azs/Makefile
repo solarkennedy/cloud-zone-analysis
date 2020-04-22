@@ -1,0 +1,11 @@
+region-list:
+	aws ec2 describe-regions  | jq -r .Regions[].RegionName > $@
+
+REGIONS := $(shell cat region-list)
+
+ami-list:
+	curl https://cloud-images.ubuntu.com/locator/ec2/releasesTable | grep '18.04 LTS' | grep amd64 | grep hvm:ebs-ssd | cut -f 2,16 -d '"' | sed 's/"/,/g' | sed 's/>//g' | sed 's|</a||g' > ami-list
+
+.PHONY: mains
+mains:
+	./create-mains.sh $(REGIONS)
