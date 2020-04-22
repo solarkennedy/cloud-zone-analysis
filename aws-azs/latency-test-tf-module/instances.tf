@@ -2,7 +2,7 @@ data "aws_availability_zones" "all" {}
 
 resource "aws_instance" "instances" {
   ami = var.ami
-  instance_type = "t2.nano"
+  instance_type = var.instance_type
   vpc_security_group_ids = ["${aws_security_group.ssh-allowed.id}"] 
   subnet_id = aws_subnet.latency-test-subnet[count.index].id
   key_name = aws_key_pair.ssh-key-pair.id
