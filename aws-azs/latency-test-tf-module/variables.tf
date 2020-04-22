@@ -1,0 +1,2 @@
+variable "ami" {}
+variable "region" {}
