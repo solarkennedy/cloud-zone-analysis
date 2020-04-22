@@ -20,7 +20,10 @@ apply:
 	./do-each-region terraform apply -auto-approve
 
 output:
-	./do-each-region 'terraform output > output.json'
+	./do-each-region 'terraform output -json > output.json'
+
+ping:
+	./do-each-region ../../ping-everything.sh
 
 destroy:
 	./do-each-region terraform destroy -auto-approve
