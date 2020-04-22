@@ -9,3 +9,15 @@ ami-list:
 .PHONY: mains
 mains:
 	./create-mains.sh $(REGIONS)
+
+init:
+	./do-each-region terraform init
+
+plan:
+	./do-each-region terraform plan 
+
+apply:
+	./do-each-region terraform apply -auto-approve
+
+destroy:
+	./do-each-region terraform destroy -auto-approve

@@ -1,1 +1,5 @@
-.terraform
+outputs/*/.terraform
+outputs/*/*.swp
+outputs/*/*.tfstate
+outputs/*/*.tfstate.backup
+outputs/*/output.json
