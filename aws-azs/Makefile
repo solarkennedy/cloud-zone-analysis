@@ -25,5 +25,8 @@ output:
 ping:
 	./do-each-region ../../ping-everything.sh
 
+csv:
+	./do-each-region '../../create-csv.sh > data.csv'
+
 destroy:
 	./do-each-region terraform destroy -auto-approve
