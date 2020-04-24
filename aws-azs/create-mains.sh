@@ -1,8 +1,12 @@
 #!/bin/bash
-for region in $*; do
+for region in $(cat region-list); do
 
   echo $region
   ami=$(grep $region ami-list | cut -f 2 -d ,)
+
+  if [[ -f outputs/$region/main.tf ]]; then
+    continue
+  fi
 
   cat << EOF  > outputs/$region/main.tf
 module "latency-test" {
