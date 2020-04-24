@@ -1,8 +1,10 @@
 #!/bin/bash
 set -eu
+region=${PWD##*/}
+[[ -f az-list ]] || aws ec2 --region=$region describe-availability-zones | jq -r .AvailabilityZones[].ZoneName | sort > az-list
 
-echo "AZ,us-east-1a,us-east-1b,us-east-1c,us-east-1d,us-east-1e,us-east-1f"
-for az in us-east-1a us-east-1b us-east-1c us-east-1d us-east-1e us-east-1f; do
+echo "AZ,$(cat az-list | tr '\n' ',')"
+for az in $(cat az-list); do
   IFS="
 "
   echo -n "$az,"
