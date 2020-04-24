@@ -2,6 +2,7 @@ module "latency-test" {
   source = "../../latency-test-tf-module"
   ami = "ami-0edd51cc29813e254"
   region = "ca-central-1"
+  instance_type = "t3.nano"
 }
 
 output "public_ips" {
