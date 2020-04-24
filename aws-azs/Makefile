@@ -1,5 +1,5 @@
 region-list:
-	aws ec2 describe-regions  | jq -r .Regions[].RegionName | grep -v ap-northeast-1> $@
+	aws ec2 describe-regions  | jq -r .Regions[].RegionName | sort | grep -v ap-northeast-1 > $@
 
 REGIONS := $(shell cat region-list)
 

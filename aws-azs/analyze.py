@@ -8,12 +8,12 @@ def get_my_az_id_mapping():
     # Comes from https://docs.aws.amazon.com/ram/latest/userguide/working-with-az-ids.html
     # These are for my account, but I hard-code them for now instead
     # making an API call every single time
-    client = boto3.client('ec2', region_name='us-east-1')
+    client = boto3.client('ec2')
     azs = client.describe_availability_zones()
     my_az_id_mapping = {az['ZoneName']: az['ZoneId'] for az in azs['AvailabilityZones']}
     return my_az_id_mapping
 
-my_az_id_mapping = {'us-east-1a': 'use1-az6', 'us-east-1b': 'use1-az1', 'us-east-1c': 'use1-az2', 'us-east-1d': 'use1-az4', 'us-east-1e': 'use1-az3', 'us-east-1f': 'use1-az5'}
+my_az_id_mapping = get_my_az_id_mapping()
 
 
 c = csv.DictReader(open('az-latency.csv'))
