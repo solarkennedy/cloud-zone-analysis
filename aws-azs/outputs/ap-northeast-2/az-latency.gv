@@ -1,0 +1,13 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"apne2-az1\n(ap-northeast-2a)"
+	"apne2-az1\n(ap-northeast-2a)" -- "apne2-az2\n(ap-northeast-2b)" [label="0.676ms" len=4.5697600000000005]
+	"apne2-az1\n(ap-northeast-2a)" -- "apne2-az3\n(ap-northeast-2c)" [label="0.994ms" len=9.88036]
+	"apne2-az2\n(ap-northeast-2b)"
+	"apne2-az2\n(ap-northeast-2b)" -- "apne2-az1\n(ap-northeast-2a)" [label="0.681ms" len=4.6376100000000005]
+	"apne2-az2\n(ap-northeast-2b)" -- "apne2-az3\n(ap-northeast-2c)" [label="1.064ms" len=11.320960000000003]
+	"apne2-az3\n(ap-northeast-2c)"
+	"apne2-az3\n(ap-northeast-2c)" -- "apne2-az1\n(ap-northeast-2a)" [label="1.001ms" len=10.020009999999997]
+	"apne2-az3\n(ap-northeast-2c)" -- "apne2-az2\n(ap-northeast-2b)" [label="1.057ms" len=11.17249]
+}

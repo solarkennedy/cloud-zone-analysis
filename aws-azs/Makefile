@@ -28,5 +28,8 @@ ping:
 csv:
 	./do-each-region '../../create-csv.sh > data.csv'
 
+analyze:
+	./do-each-region 'python3 ../../analyze.py'
+
 destroy:
 	./do-each-region terraform destroy -auto-approve

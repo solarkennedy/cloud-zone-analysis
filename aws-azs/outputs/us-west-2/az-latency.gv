@@ -1,0 +1,20 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"usw2-az2\n(us-west-2a)"
+	"usw2-az2\n(us-west-2a)" -- "usw2-az1\n(us-west-2b)" [label="0.724ms" len=5.241759999999999]
+	"usw2-az2\n(us-west-2a)" -- "usw2-az3\n(us-west-2c)" [label="1.065ms" len=11.342249999999998]
+	"usw2-az2\n(us-west-2a)" -- "usw2-az4\n(us-west-2d)" [label="0.553ms" len=3.0580900000000004]
+	"usw2-az1\n(us-west-2b)"
+	"usw2-az1\n(us-west-2b)" -- "usw2-az2\n(us-west-2a)" [label="0.718ms" len=5.15524]
+	"usw2-az1\n(us-west-2b)" -- "usw2-az3\n(us-west-2c)" [label="0.323ms" len=1.04329]
+	"usw2-az1\n(us-west-2b)" -- "usw2-az4\n(us-west-2d)" [label="0.601ms" len=3.6120099999999997]
+	"usw2-az3\n(us-west-2c)"
+	"usw2-az3\n(us-west-2c)" -- "usw2-az2\n(us-west-2a)" [label="1.076ms" len=11.577760000000001]
+	"usw2-az3\n(us-west-2c)" -- "usw2-az1\n(us-west-2b)" [label="0.322ms" len=1.0368400000000002]
+	"usw2-az3\n(us-west-2c)" -- "usw2-az4\n(us-west-2d)" [label="0.536ms" len=2.8729600000000004]
+	"usw2-az4\n(us-west-2d)"
+	"usw2-az4\n(us-west-2d)" -- "usw2-az2\n(us-west-2a)" [label="0.535ms" len=2.86225]
+	"usw2-az4\n(us-west-2d)" -- "usw2-az1\n(us-west-2b)" [label="0.597ms" len=3.5640899999999998]
+	"usw2-az4\n(us-west-2d)" -- "usw2-az3\n(us-west-2c)" [label="0.553ms" len=3.0580900000000004]
+}

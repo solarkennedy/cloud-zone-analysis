@@ -1,0 +1,40 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"use1-az6\n(us-east-1a)"
+	"use1-az6\n(us-east-1a)" -- "use1-az1\n(us-east-1b)" [label="0.780ms" len=6.0840000000000005]
+	"use1-az6\n(us-east-1a)" -- "use1-az2\n(us-east-1c)" [label="0.957ms" len=9.158489999999999]
+	"use1-az6\n(us-east-1a)" -- "use1-az4\n(us-east-1d)" [label="1.322ms" len=17.476840000000003]
+	"use1-az6\n(us-east-1a)" -- "use1-az3\n(us-east-1e)" [label="0.596ms" len=3.5521599999999998]
+	"use1-az6\n(us-east-1a)" -- "use1-az5\n(us-east-1f)" [label="1.054ms" len=11.10916]
+	"use1-az1\n(us-east-1b)"
+	"use1-az1\n(us-east-1b)" -- "use1-az6\n(us-east-1a)" [label="0.790ms" len=6.241000000000001]
+	"use1-az1\n(us-east-1b)" -- "use1-az2\n(us-east-1c)" [label="0.689ms" len=4.747209999999999]
+	"use1-az1\n(us-east-1b)" -- "use1-az4\n(us-east-1d)" [label="0.693ms" len=4.802489999999999]
+	"use1-az1\n(us-east-1b)" -- "use1-az3\n(us-east-1e)" [label="0.866ms" len=7.49956]
+	"use1-az1\n(us-east-1b)" -- "use1-az5\n(us-east-1f)" [label="0.497ms" len=2.47009]
+	"use1-az2\n(us-east-1c)"
+	"use1-az2\n(us-east-1c)" -- "use1-az6\n(us-east-1a)" [label="0.919ms" len=8.445610000000002]
+	"use1-az2\n(us-east-1c)" -- "use1-az1\n(us-east-1b)" [label="0.675ms" len=4.55625]
+	"use1-az2\n(us-east-1c)" -- "use1-az4\n(us-east-1d)" [label="0.659ms" len=4.34281]
+	"use1-az2\n(us-east-1c)" -- "use1-az3\n(us-east-1e)" [label="0.868ms" len=7.53424]
+	"use1-az2\n(us-east-1c)" -- "use1-az5\n(us-east-1f)" [label="0.706ms" len=4.98436]
+	"use1-az4\n(us-east-1d)"
+	"use1-az4\n(us-east-1d)" -- "use1-az6\n(us-east-1a)" [label="1.298ms" len=16.84804]
+	"use1-az4\n(us-east-1d)" -- "use1-az1\n(us-east-1b)" [label="0.699ms" len=4.88601]
+	"use1-az4\n(us-east-1d)" -- "use1-az2\n(us-east-1c)" [label="0.636ms" len=4.0449600000000006]
+	"use1-az4\n(us-east-1d)" -- "use1-az3\n(us-east-1e)" [label="0.851ms" len=7.24201]
+	"use1-az4\n(us-east-1d)" -- "use1-az5\n(us-east-1f)" [label="1.059ms" len=11.21481]
+	"use1-az3\n(us-east-1e)"
+	"use1-az3\n(us-east-1e)" -- "use1-az6\n(us-east-1a)" [label="0.640ms" len=4.096]
+	"use1-az3\n(us-east-1e)" -- "use1-az1\n(us-east-1b)" [label="0.905ms" len=8.19025]
+	"use1-az3\n(us-east-1e)" -- "use1-az2\n(us-east-1c)" [label="0.880ms" len=7.744]
+	"use1-az3\n(us-east-1e)" -- "use1-az4\n(us-east-1d)" [label="0.912ms" len=8.317440000000001]
+	"use1-az3\n(us-east-1e)" -- "use1-az5\n(us-east-1f)" [label="0.709ms" len=5.026809999999999]
+	"use1-az5\n(us-east-1f)"
+	"use1-az5\n(us-east-1f)" -- "use1-az6\n(us-east-1a)" [label="1.027ms" len=10.547289999999998]
+	"use1-az5\n(us-east-1f)" -- "use1-az1\n(us-east-1b)" [label="0.492ms" len=2.42064]
+	"use1-az5\n(us-east-1f)" -- "use1-az2\n(us-east-1c)" [label="0.675ms" len=4.55625]
+	"use1-az5\n(us-east-1f)" -- "use1-az4\n(us-east-1d)" [label="1.079ms" len=11.642409999999998]
+	"use1-az5\n(us-east-1f)" -- "use1-az3\n(us-east-1e)" [label="0.686ms" len=4.705960000000001]
+}

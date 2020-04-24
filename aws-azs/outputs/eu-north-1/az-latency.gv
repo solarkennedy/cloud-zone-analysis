@@ -1,0 +1,13 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"eun1-az1\n(eu-north-1a)"
+	"eun1-az1\n(eu-north-1a)" -- "eun1-az2\n(eu-north-1b)" [label="1.090ms" len=11.881000000000002]
+	"eun1-az1\n(eu-north-1a)" -- "eun1-az3\n(eu-north-1c)" [label="0.956ms" len=9.13936]
+	"eun1-az2\n(eu-north-1b)"
+	"eun1-az2\n(eu-north-1b)" -- "eun1-az1\n(eu-north-1a)" [label="1.081ms" len=11.68561]
+	"eun1-az2\n(eu-north-1b)" -- "eun1-az3\n(eu-north-1c)" [label="1.428ms" len=20.391839999999995]
+	"eun1-az3\n(eu-north-1c)"
+	"eun1-az3\n(eu-north-1c)" -- "eun1-az1\n(eu-north-1a)" [label="0.966ms" len=9.33156]
+	"eun1-az3\n(eu-north-1c)" -- "eun1-az2\n(eu-north-1b)" [label="1.447ms" len=20.938090000000003]
+}

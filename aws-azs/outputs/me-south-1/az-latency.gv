@@ -1,0 +1,13 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"mes1-az1\n(me-south-1a)"
+	"mes1-az1\n(me-south-1a)" -- "mes1-az2\n(me-south-1b)" [label="0.398ms" len=1.5840400000000001]
+	"mes1-az1\n(me-south-1a)" -- "mes1-az3\n(me-south-1c)" [label="0.355ms" len=1.26025]
+	"mes1-az2\n(me-south-1b)"
+	"mes1-az2\n(me-south-1b)" -- "mes1-az1\n(me-south-1a)" [label="0.395ms" len=1.5602500000000004]
+	"mes1-az2\n(me-south-1b)" -- "mes1-az3\n(me-south-1c)" [label="0.404ms" len=1.6321600000000003]
+	"mes1-az3\n(me-south-1c)"
+	"mes1-az3\n(me-south-1c)" -- "mes1-az1\n(me-south-1a)" [label="0.354ms" len=1.2531599999999998]
+	"mes1-az3\n(me-south-1c)" -- "mes1-az2\n(me-south-1b)" [label="0.367ms" len=1.3468900000000001]
+}

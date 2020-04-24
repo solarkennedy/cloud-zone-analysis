@@ -1,0 +1,13 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"apse2-az1\n(ap-southeast-2a)"
+	"apse2-az1\n(ap-southeast-2a)" -- "apse2-az3\n(ap-southeast-2b)" [label="1.139ms" len=12.97321]
+	"apse2-az1\n(ap-southeast-2a)" -- "apse2-az2\n(ap-southeast-2c)" [label="0.935ms" len=8.742250000000002]
+	"apse2-az3\n(ap-southeast-2b)"
+	"apse2-az3\n(ap-southeast-2b)" -- "apse2-az1\n(ap-southeast-2a)" [label="1.142ms" len=13.04164]
+	"apse2-az3\n(ap-southeast-2b)" -- "apse2-az2\n(ap-southeast-2c)" [label="1.297ms" len=16.82209]
+	"apse2-az2\n(ap-southeast-2c)"
+	"apse2-az2\n(ap-southeast-2c)" -- "apse2-az1\n(ap-southeast-2a)" [label="0.964ms" len=9.292959999999999]
+	"apse2-az2\n(ap-southeast-2c)" -- "apse2-az3\n(ap-southeast-2b)" [label="1.368ms" len=18.714240000000004]
+}

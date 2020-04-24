@@ -1,0 +1,8 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"usw1-az3\n(us-west-1a)"
+	"usw1-az3\n(us-west-1a)" -- "usw1-az1\n(us-west-1b)" [label="1.101ms" len=12.12201]
+	"usw1-az1\n(us-west-1b)"
+	"usw1-az1\n(us-west-1b)" -- "usw1-az3\n(us-west-1a)" [label="1.085ms" len=11.77225]
+}

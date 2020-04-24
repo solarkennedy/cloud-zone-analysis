@@ -1,0 +1,13 @@
+graph "Inter-AZ Latency" {
+	overlap=scale
+	splines=true
+	"cac1-az1\n(ca-central-1a)"
+	"cac1-az1\n(ca-central-1a)" -- "cac1-az2\n(ca-central-1b)" [label="0.392ms" len=1.5366400000000002]
+	"cac1-az1\n(ca-central-1a)" -- "cac1-az4\n(ca-central-1d)" [label="0.891ms" len=7.93881]
+	"cac1-az2\n(ca-central-1b)"
+	"cac1-az2\n(ca-central-1b)" -- "cac1-az1\n(ca-central-1a)" [label="0.382ms" len=1.4592399999999999]
+	"cac1-az2\n(ca-central-1b)" -- "cac1-az4\n(ca-central-1d)" [label="1.195ms" len=14.28025]
+	"cac1-az4\n(ca-central-1d)"
+	"cac1-az4\n(ca-central-1d)" -- "cac1-az1\n(ca-central-1a)" [label="0.879ms" len=7.7264100000000004]
+	"cac1-az4\n(ca-central-1d)" -- "cac1-az2\n(ca-central-1b)" [label="1.153ms" len=13.29409]
+}
